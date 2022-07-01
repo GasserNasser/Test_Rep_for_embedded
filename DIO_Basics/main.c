@@ -7,7 +7,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 int main (void){
-	DDRA=0b00001111;
+	DDRB=0b00001111;
 
 	while(1){
 
@@ -15,7 +15,7 @@ int main (void){
 
 		for(int i=0;i<4;i++){
 			_delay_ms(500);
-			PORTA<<=1;
+			PORTB<<=1;
 
 
 		}
