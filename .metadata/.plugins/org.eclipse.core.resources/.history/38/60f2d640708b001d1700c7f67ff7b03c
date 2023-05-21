@@ -1,0 +1,39 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 3, 2023
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include"STD_TYPES.h"
+#include<avr/io.h>
+#include<util/delay.h>
+#include"BIT_MATH.h"
+
+void KEYPAD_Init(){
+	/* PORTD INPUTS OUTPUTS*/
+	PORTD=0x0f;
+
+	/* PULL UP  Resistors Activation    Deactivation for the coulumns */
+	PORTD=0xff ;
+}
+
+u8 GetPresssedKey(void){
+	u8 pressed_key= 0;
+
+	for(u8 cols=0;cols<4;cols++){
+		for(u8 rows=0;rows<4;rows++){
+
+		}
+	}
+
+	return pressed_key;
+}
+
+int main(void){
+
+	while(1){
+
+
+	}
+	return 1;
+}

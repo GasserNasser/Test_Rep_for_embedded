@@ -1,0 +1,15 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 8, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+
+int main (void){
+
+	while(1){
+
+	}
+
+	return 1;
+}

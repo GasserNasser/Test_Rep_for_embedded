@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 25, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include <avr/io.h>
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+int main (void){
+	SE
+
+	while(1){
+		PORTA=0b00000001;
+	}
+	return 0;
+
+}

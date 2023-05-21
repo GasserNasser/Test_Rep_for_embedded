@@ -1,0 +1,44 @@
+20:04:15 **** Incremental Build of configuration Release for project WDT_Driver ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:14:
+c:/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+Finished building: ../APP/main.c
+ 
+Building target: WDT_Driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,WDT_Driver.map -mmcu=atmega32 -o "WDT_Driver.elf"  ./MCAL/WDT/WDT_prg.o  ./MCAL/TIMERS/TIMERS_prg.o  ./MCAL/GIE/GIE_prg.o  ./MCAL/EXTI/EXTI_prg.o  ./MCAL/DIO/DIO_prg.o  ./MCAL/ADC/ADC_prg.o  ./HAL/STPR/STPR_prg.o  ./HAL/SSD/SSD_prg.o  ./HAL/LCD/LCD_prg.o  ./HAL/KPD/KPD_prg.o  ./HAL/DCM/DCM_prg.o  ./APP/main.o   
+Finished building target: WDT_Driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S WDT_Driver.elf  >"WDT_Driver.lss"
+Finished building: WDT_Driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex WDT_Driver.elf  "WDT_Driver.hex"
+Finished building: WDT_Driver.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex WDT_Driver.elf  "WDT_Driver.eep"
+Finished building: WDT_Driver.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 WDT_Driver.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3076 bytes (9.4% Full)
+(.text + .data + .bootloader)
+
+Data:         30 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:04:19 Build Finished (took 3s.991ms)
+

@@ -1,0 +1,82 @@
+15:52:24 **** Incremental Build of configuration Release for project Drivers ****
+make all 
+Building file: ../MCAL/GIE/GIE_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GIE/GIE_prg.d" -MT"MCAL/GIE/GIE_prg.o" -c -o "MCAL/GIE/GIE_prg.o" "../MCAL/GIE/GIE_prg.c"
+Finished building: ../MCAL/GIE/GIE_prg.c
+ 
+Building file: ../MCAL/EXTI/EXTI_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/EXTI/EXTI_prg.d" -MT"MCAL/EXTI/EXTI_prg.o" -c -o "MCAL/EXTI/EXTI_prg.o" "../MCAL/EXTI/EXTI_prg.c"
+Finished building: ../MCAL/EXTI/EXTI_prg.c
+ 
+Building file: ../MCAL/DIO/DIO_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/DIO/DIO_prg.d" -MT"MCAL/DIO/DIO_prg.o" -c -o "MCAL/DIO/DIO_prg.o" "../MCAL/DIO/DIO_prg.c"
+Finished building: ../MCAL/DIO/DIO_prg.c
+ 
+Building file: ../MCAL/ADC/ADC_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/ADC/ADC_prg.d" -MT"MCAL/ADC/ADC_prg.o" -c -o "MCAL/ADC/ADC_prg.o" "../MCAL/ADC/ADC_prg.c"
+Finished building: ../MCAL/ADC/ADC_prg.c
+ 
+Building file: ../HAL/SSD/SSD_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/SSD/SSD_prg.d" -MT"HAL/SSD/SSD_prg.o" -c -o "HAL/SSD/SSD_prg.o" "../HAL/SSD/SSD_prg.c"
+Finished building: ../HAL/SSD/SSD_prg.c
+ 
+Building file: ../HAL/LCD/LCD_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LCD/LCD_prg.d" -MT"HAL/LCD/LCD_prg.o" -c -o "HAL/LCD/LCD_prg.o" "../HAL/LCD/LCD_prg.c"
+Finished building: ../HAL/LCD/LCD_prg.c
+ 
+Building file: ../HAL/KPD/KPD_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/KPD/KPD_prg.d" -MT"HAL/KPD/KPD_prg.o" -c -o "HAL/KPD/KPD_prg.o" "../HAL/KPD/KPD_prg.c"
+Finished building: ../HAL/KPD/KPD_prg.c
+ 
+Building file: ../HAL/DCM/DCM_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/DCM/DCM_prg.d" -MT"HAL/DCM/DCM_prg.o" -c -o "HAL/DCM/DCM_prg.o" "../HAL/DCM/DCM_prg.c"
+Finished building: ../HAL/DCM/DCM_prg.c
+ 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+Finished building: ../APP/main.c
+ 
+Building target: Drivers.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Drivers.map -mmcu=atmega32 -o "Drivers.elf"  ./MCAL/GIE/GIE_prg.o  ./MCAL/EXTI/EXTI_prg.o  ./MCAL/DIO/DIO_prg.o  ./MCAL/ADC/ADC_prg.o  ./HAL/STPR/STPR_prg.o  ./HAL/SSD/SSD_prg.o  ./HAL/LCD/LCD_prg.o  ./HAL/KPD/KPD_prg.o  ./HAL/DCM/DCM_prg.o  ./APP/main.o   
+Finished building target: Drivers.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Drivers.elf  >"Drivers.lss"
+Finished building: Drivers.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Drivers.elf  "Drivers.hex"
+Finished building: Drivers.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Drivers.elf  "Drivers.eep"
+Finished building: Drivers.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Drivers.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3042 bytes (9.3% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:52:32 Build Finished (took 7s.671ms)
+

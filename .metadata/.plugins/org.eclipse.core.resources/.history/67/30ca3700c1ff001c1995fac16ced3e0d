@@ -1,0 +1,33 @@
+/*
+ * SSD_prg.c
+ *
+ *  Created on: Jul 9, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+
+#include "../../LIB/STD_TYPES.h"
+#include "../../MCAL/DIO/DIO_int.h"
+
+static const u8 G_u8SSD_Nums[]={
+		~(0b00111111),
+		~(0b00000110),
+		~(0b01011011),
+		~(0b01001111),
+		~(0b01100110),
+		~(0b01101101),
+		~(0b01111101),
+		~(0b00000111),
+		~(0b01111111),
+		~(0b01101111)
+};
+
+
+void SSD_vDisplayNum(u8 A_u8Num)
+{
+	DIO_u8SetPortVal(DIO_PORTA,G_u8SSD_Nums[A_u8Num]);
+
+}
+void SSD_vTurnOff(void)
+{
+
+}

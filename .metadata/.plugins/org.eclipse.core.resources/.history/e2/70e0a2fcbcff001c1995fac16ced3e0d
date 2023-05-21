@@ -1,0 +1,16 @@
+/*
+ * SSD_int.h
+ *
+ *  Created on: Jul 9, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+
+#ifndef HAL_SSD_SSD_INT_H_
+#define HAL_SSD_SSD_INT_H_
+
+void SSD_DisplayNum(u8 A_u8Num);
+SSD_TurnOff();
+
+
+
+#endif /* HAL_SSD_SSD_INT_H_ */

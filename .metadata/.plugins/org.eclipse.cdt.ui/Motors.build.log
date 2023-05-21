@@ -1,0 +1,42 @@
+22:20:48 **** Incremental Build of configuration Release for project Motors ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+Finished building: ../APP/main.c
+ 
+Building target: Motors.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Motors.map -mmcu=atmega32 -o "Motors.elf"  ./MCAL/DIO/DIO_prg.o  ./HAL/DCM/DCM_prg.o  ./APP/main.o   
+Finished building target: Motors.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Motors.elf  >"Motors.lss"
+Finished building: Motors.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Motors.elf  "Motors.hex"
+Finished building: Motors.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Motors.elf  "Motors.eep"
+Finished building: Motors.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Motors.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     982 bytes (3.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:20:49 Build Finished (took 1s.34ms)
+

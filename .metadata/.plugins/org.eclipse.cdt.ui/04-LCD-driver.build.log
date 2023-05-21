@@ -1,0 +1,47 @@
+22:03:14 **** Incremental Build of configuration Release for project 04-LCD-driver ****
+make all 
+Building file: ../HAL/LCD/LCD_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LCD/LCD_prg.d" -MT"HAL/LCD/LCD_prg.o" -c -o "HAL/LCD/LCD_prg.o" "../HAL/LCD/LCD_prg.c"
+Finished building: ../HAL/LCD/LCD_prg.c
+ 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+Finished building: ../APP/main.c
+ 
+Building target: 04-LCD-driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,04-LCD-driver.map -mmcu=atmega32 -o "04-LCD-driver.elf"  ./MCAL/DIO/DIO_prg.o  ./HAL/LCD/LCD_prg.o  ./APP/main.o   
+Finished building target: 04-LCD-driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S 04-LCD-driver.elf  >"04-LCD-driver.lss"
+Finished building: 04-LCD-driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex 04-LCD-driver.elf  "04-LCD-driver.hex"
+Finished building: 04-LCD-driver.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex 04-LCD-driver.elf  "04-LCD-driver.eep"
+Finished building: 04-LCD-driver.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 04-LCD-driver.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    1036 bytes (3.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:03:15 Build Finished (took 1s.181ms)
+

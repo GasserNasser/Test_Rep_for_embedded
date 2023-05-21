@@ -1,0 +1,15 @@
+18:58:22 **** Build of configuration Debug for project 01_KEYPAD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: 01_KEYPAD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,01_KEYPAD.map -mmcu=atmega32 -o "01_KEYPAD.elf"  ./main.o   
+c:/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o:(.init9+0x0): undefined reference to `main'
+make: *** [01_KEYPAD.elf] Error 1
+
+18:58:23 Build Finished (took 640ms)
+

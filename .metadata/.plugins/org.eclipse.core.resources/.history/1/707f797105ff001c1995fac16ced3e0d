@@ -1,0 +1,19 @@
+/*
+ * DIO_int.h
+ *
+ *  Created on: Jul 8, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+
+#ifndef MCAL_DIO_DIO_INT_H_
+#define MCAL_DIO_DIO_INT_H_
+
+DIO_SetPinDir();
+DIO_SetPinVal();
+DIO_GetPinVal();
+DIO_SetPortDir();
+DIO_SetPortval();
+DIO_GetPortVal();
+
+
+#endif /* MCAL_DIO_DIO_INT_H_ */

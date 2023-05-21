@@ -1,0 +1,7 @@
+23:33:04 **** Clean-only build of configuration Release for project ADC_Driver ****
+make clean 
+rm -rf  ADC_Driver.hex  ./MCAL/GIE/GIE_prg.o  ./MCAL/EXTI/EXTI_prg.o  ./MCAL/DIO/DIO_prg.o  ./MCAL/ADC/ADC_prg.o  ./HAL/STPR/STPR_prg.o  ./HAL/SSD/SSD_prg.o  ./HAL/LCD/LCD_prg.o  ./HAL/KPD/KPD_prg.o  ./HAL/DCM/DCM_prg.o  ./APP/main.o  ADC_Driver.eep  sizedummy  ADC_Driver.lss  ./MCAL/GIE/GIE_prg.d  ./MCAL/EXTI/EXTI_prg.d  ./MCAL/DIO/DIO_prg.d  ./MCAL/ADC/ADC_prg.d  ./HAL/STPR/STPR_prg.d  ./HAL/SSD/SSD_prg.d  ./HAL/LCD/LCD_prg.d  ./HAL/KPD/KPD_prg.d  ./HAL/DCM/DCM_prg.d  ./APP/main.d  ADC_Driver.elf
+ 
+
+23:33:04 Build Finished (took 282ms)
+

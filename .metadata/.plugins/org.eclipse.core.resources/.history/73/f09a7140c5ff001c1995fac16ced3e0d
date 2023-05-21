@@ -1,0 +1,16 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 8, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include "../LIB/STD_TYPES.h"
+#include "../MCAL/DIO/DIO_int.h"
+int main (void){
+
+	while(1){
+
+	}
+
+	return 1;
+}

@@ -1,0 +1,126 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2023
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include"../LIB/STD_TYPES.h"
+#include"../MCAL/DIO/DIO_int.h"
+#include"../HAL/SSD/SSD_int.h"
+#include"../HAL/LCD/LCD_int.h"
+#include<util/delay.h>
+u8 G_u8LCD_pattern0[8]={0, 10, 21, 17, 10, 4, 0, 0};//Heart
+u8 G_u8LCD_pattern1[8]={0, 28, 2, 1, 63, 0, 8, 0};//G
+u8 G_u8LCD_pattern2[8]={8, 8, 8, 8, 15, 0, 0, 0};//A
+u8 G_u8LCD_pattern3[8]={0, 0, 21, 21, 63, 0, 0, 0};//S
+u8 G_u8LCD_pattern4[8]={0, 0, 0, 0, 3, 4, 24, 0};//R
+u8 G_u8LCD_pattern5[8]={6, 1, 15, 9, 63, 0, 0, 0};//H
+u8 G_u8LCD_pattern6[8]={0, 0, 42, 34, 63, 0, 0, 0};//N
+u8 G_u8LCD_pattern7[8]={0, 0, 10, 21, 17, 10, 4, 0};
+
+int main(void){
+
+	LCD_vInit();
+	LCD_vSaveCustomChar(0,G_u8LCD_pattern0);
+	LCD_vSaveCustomChar(1,G_u8LCD_pattern1);
+	LCD_vSaveCustomChar(2,G_u8LCD_pattern2);
+	LCD_vSaveCustomChar(3,G_u8LCD_pattern3);
+	LCD_vSaveCustomChar(4,G_u8LCD_pattern4);
+	LCD_vSaveCustomChar(5,G_u8LCD_pattern5);
+	LCD_vSaveCustomChar(6,G_u8LCD_pattern6);
+	LCD_vSaveCustomChar(7,G_u8LCD_pattern7);
+
+
+	//	//Hana
+	//	LCD_vSendChar(2);
+	//	LCD_vSendChar(6);
+	//	LCD_vSendChar(5);
+	//	LCD_vSendChar(0);
+	//	//Gasser
+	//	LCD_vSendChar(4);
+	//	LCD_vSendChar(3);
+	//	LCD_vSendChar(2);
+	//	LCD_vSendChar(1);
+
+
+
+	LCD_vPrintNumber(sizeof(s32));
+	//	LCD_vSendChar(0+'0');
+	//	LCD_vSendChar(1+'0');
+	//	LCD_vSendChar(2+'0');
+	//	LCD_vSendChar(3+'0');
+	//	LCD_vSendChar(4+'0');
+	//
+	//	LCD_vSendChar(5+'0');
+	//	LCD_vSendChar(6+'0');
+	//	LCD_vSendChar(7+'0');
+	//	LCD_vSendChar(8+'0');
+
+
+
+
+	while(1){
+//		for(s8 x=15;x>=0;x--){
+//			LCD_vSetCursorPosition(x,0);
+//			//Hana
+//			LCD_vSendChar(2);
+//			LCD_vSendChar(6);
+//			LCD_vSendChar(5);
+//			LCD_vSendChar(0);
+//			//Gasser
+//			LCD_vSendChar(4);
+//			LCD_vSendChar(3);
+//			LCD_vSendChar(2);
+//			LCD_vSendChar(1);
+//			_delay_ms(500);
+//			LCD_vSendCommand(LCD_CLEAR);
+//
+//		}
+
+
+	}
+	return 1;
+}
+
+//
+//int main(void){
+//	SSD_vInit();
+//	KPD_vInit();
+//	u8 key=0;
+//
+//	while(1){
+//
+//		key=KPD_u8GetPressedKey();
+//		switch(key){
+//		case 1:SSD_vDisplayNum(1);
+//		break;
+//		case 2:SSD_vDisplayNum(2);
+//		break;
+//		case 3:SSD_vDisplayNum(3);
+//		break;
+//		case 4:SSD_vDisplayNum(4);
+//		break;
+//		case 5:SSD_vDisplayNum(5);
+//		break;
+//		case 6:SSD_vDisplayNum(6);
+//		break;
+//		case 7:SSD_vDisplayNum(7);
+//		break;
+//		case 8:SSD_vDisplayNum(8);
+//		break;
+//		case 9:SSD_vDisplayNum(9);
+//		break;
+//
+//
+//		}
+//
+//
+//
+//	}
+//
+//
+//
+//
+//}
+
+

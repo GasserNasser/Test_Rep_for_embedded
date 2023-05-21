@@ -1,0 +1,23 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 8, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include "../LIB/STD_TYPES.h"
+#include "../MCAL/DIO/DIO_int.h"
+#include "../HAL/SSD/SSD_int.h"
+#include <util/delay.h>
+int main (void){
+	SSD_vInit();
+	for(u8 i =0; i<10;i++){
+		SSD_vDisplayNum(i);
+		_delay_ms(500);
+	}
+
+	while(1){
+
+	}
+
+	return 1;
+}

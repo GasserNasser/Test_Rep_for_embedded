@@ -1,0 +1,27 @@
+/*
+ * main.c
+ *
+ *  Created on: Jun 25, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include <avr/io.h>
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+
+int main (void){
+	SET_BIT(DDRA,0); // PA0 -> OUTPUT
+	CLR_BIT(DDRA,1); // PA1 -> INPUT
+	SET_BIT(PORTA,1); // PA1 -> PULLUP
+
+	while(1){
+
+		if(GET_BIT(PINA,1)==0){
+			SET_BIT(PORTA,0);
+		}
+		else if((GET_BIT(PINA,1)==1){
+			CLR_BIT(PORTA,0);
+		}
+	}
+	return 0;
+
+}

@@ -1,0 +1,72 @@
+/*
+ * DIO_prg.c
+ *
+ *  Created on: Jul 8, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include "../../LIB/STD_TYPES.h"
+#include "../../LIB/BIT_MATH.h"
+#include <avr/io.h>
+#include "DIO_int.h"
+void DIO_vSetPinDir(u8 A_u8PortNo, u8 A_u8PinNo,u8 A_u8Dir)
+{
+	if(A_u8Dir == DIO_OUTPUT)
+	{
+		switch(A_u8PortNo)
+			{
+			case 0:
+				SET_BIT(DDRA,A_u8PinNo);
+				break;
+			case 1:
+				SET_BIT(DDRB,A_u8PinNo);
+				break;
+			case 2:
+				SET_BIT(DDRC,A_u8PinNo);
+				break;
+			case 3:
+				SET_BIT(DDRC,A_u8PinNo);
+				break;
+			}
+	}
+	else if(A_u8Dir == 0)
+	{
+		switch(A_u8PortNo)
+			{
+			case 0:
+				CLR_BIT(DDRA,A_u8PinNo);
+				break;
+			case 1:
+				CLR_BIT(DDRB,A_u8PinNo);
+				break;
+			case 2:
+				CLR_BIT(DDRC,A_u8PinNo);
+				break;
+			case 3:
+				CLR_BIT(DDRD,A_u8PinNo);
+				break;
+			}
+	}
+}
+void DIO_vSetPinVal(u8 A_u8PortNo, u8 A_u8PinNo, u8 A_u8val)
+{
+
+}
+u8 DIO_u8GetPinVal(u8 A_u8PortNo, u8 A_u8PinNo)
+{
+
+}
+
+void DIO_vSetPortDir(u8 A_u8PortNo, u8 A_u8Dir)
+{
+
+}
+void DIO_vSetPortval(u8 A_u8PortNo, u8 A_u8val)
+{
+
+}
+u8 DIO_u8GetPortVal(u8 A_u8PortNo)
+{
+
+}
+
+

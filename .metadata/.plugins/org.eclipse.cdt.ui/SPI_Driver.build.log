@@ -1,0 +1,47 @@
+22:17:32 **** Incremental Build of configuration Release for project SPI_Driver ****
+make all 
+Building file: ../MCAL/SPI/SPI_prg.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/SPI/SPI_prg.d" -MT"MCAL/SPI/SPI_prg.o" -c -o "MCAL/SPI/SPI_prg.o" "../MCAL/SPI/SPI_prg.c"
+Finished building: ../MCAL/SPI/SPI_prg.c
+ 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+Finished building: ../APP/main.c
+ 
+Building target: SPI_Driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,SPI_Driver.map -mmcu=atmega32 -o "SPI_Driver.elf"  ./MCAL/WDT/WDT_prg.o  ./MCAL/UART/UART_prg.o  ./MCAL/TIMERS/TIMERS_prg.o  ./MCAL/SPI/SPI_prg.o  ./MCAL/GIE/GIE_prg.o  ./MCAL/EXTI/EXTI_prg.o  ./MCAL/DIO/DIO_prg.o  ./MCAL/ADC/ADC_prg.o  ./HAL/STPR/STPR_prg.o  ./HAL/SSD/SSD_prg.o  ./HAL/LCD/LCD_prg.o  ./HAL/KPD/KPD_prg.o  ./HAL/DCM/DCM_prg.o  ./APP/main.o   
+Finished building target: SPI_Driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S SPI_Driver.elf  >"SPI_Driver.lss"
+Finished building: SPI_Driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex SPI_Driver.elf  "SPI_Driver.hex"
+Finished building: SPI_Driver.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex SPI_Driver.elf  "SPI_Driver.eep"
+Finished building: SPI_Driver.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 SPI_Driver.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3166 bytes (9.7% Full)
+(.text + .data + .bootloader)
+
+Data:         30 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:17:34 Build Finished (took 2s.359ms)
+

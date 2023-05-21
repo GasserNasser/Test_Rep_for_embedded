@@ -1,0 +1,44 @@
+16:52:29 **** Incremental Build of configuration Release for project Timers_Driver ****
+make all 
+Building file: ../APP/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"APP/main.d" -MT"APP/main.o" -c -o "APP/main.o" "../APP/main.c"
+In file included from ../APP/main.c:13:
+c:/imt_sdk_win_64/winavr/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+Finished building: ../APP/main.c
+ 
+Building target: Timers_Driver.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Timers_Driver.map -mmcu=atmega32 -o "Timers_Driver.elf"  ./MCAL/TIMERS/TIMERS_prg.o  ./MCAL/GIE/GIE_prg.o  ./MCAL/EXTI/EXTI_prg.o  ./MCAL/DIO/DIO_prg.o  ./MCAL/ADC/ADC_prg.o  ./HAL/STPR/STPR_prg.o  ./HAL/SSD/SSD_prg.o  ./HAL/LCD/LCD_prg.o  ./HAL/KPD/KPD_prg.o  ./HAL/DCM/DCM_prg.o  ./APP/main.o   
+Finished building target: Timers_Driver.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Timers_Driver.elf  >"Timers_Driver.lss"
+Finished building: Timers_Driver.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Timers_Driver.elf  "Timers_Driver.hex"
+Finished building: Timers_Driver.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Timers_Driver.elf  "Timers_Driver.eep"
+Finished building: Timers_Driver.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Timers_Driver.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    3290 bytes (10.0% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (2.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:52:30 Build Finished (took 1s.390ms)
+

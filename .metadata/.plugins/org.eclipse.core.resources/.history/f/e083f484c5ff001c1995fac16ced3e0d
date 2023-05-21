@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: Jul 8, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+#include "../LIB/STD_TYPES.h"
+#include "../MCAL/DIO/DIO_int.h"
+#include "../HAL/SSD/SSD_int.h"
+int main (void){
+	SSD_vInit();
+
+	while(1){
+
+	}
+
+	return 1;
+}

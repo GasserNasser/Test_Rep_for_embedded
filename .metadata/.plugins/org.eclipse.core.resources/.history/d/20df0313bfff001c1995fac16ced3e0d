@@ -1,0 +1,17 @@
+/*
+ * SSD_prg.c
+ *
+ *  Created on: Jul 9, 2022
+ *      Author: Ahmed Ebd ELNasser
+ */
+
+#include "../../LIB/STD_TYPES.h"
+#include "../../MCAL/DIO/DIO_int.h"
+void SSD_vDisplayNum(u8 A_u8Num)
+{
+
+}
+void SSD_vTurnOff(void)
+{
+
+}
